@@ -1,0 +1,738 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08172b">
+  <meta name="description" content="Justice Property Protection Inc. provides professional property care, property monitoring, lawn care and seasonal maintenance across Greater Vancouver.">
+  <title>Justice Property Protection Inc. | Professional Property Care</title>
+
+  <style>
+    :root {
+      --navy: #08172b;
+      --navy-light: #102642;
+      --gold: #d6b36a;
+      --cream: #f6f3ec;
+      --white: #ffffff;
+      --muted: #b8c3d1;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--cream);
+      color: var(--navy);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: auto;
+    }
+
+    header {
+      background: var(--navy);
+      color: var(--white);
+      border-bottom: 1px solid rgba(214,179,106,.35);
+    }
+
+    nav {
+      min-height: 94px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+    }
+
+    .brand svg {
+      width: 58px;
+      height: 65px;
+      flex-shrink: 0;
+    }
+
+    .brand-name {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 18px;
+      font-weight: bold;
+      letter-spacing: 1.2px;
+      line-height: 1.35;
+    }
+
+    .brand-name span {
+      display: block;
+      color: var(--gold);
+      font-family: Arial, sans-serif;
+      font-size: 10px;
+      letter-spacing: 3px;
+      margin-top: 4px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 27px;
+      font-size: 13px;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    .nav-cta {
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      padding: 11px 17px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse at 85% 45%, #193654 0%, transparent 43%),
+        linear-gradient(120deg, #08172b, #102642);
+      color: var(--white);
+      padding: 105px 0 112px;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 410px;
+      height: 410px;
+      border: 1px solid rgba(214,179,106,.12);
+      border-radius: 50%;
+      right: -110px;
+      top: 60px;
+      box-shadow: 0 0 0 35px rgba(214,179,106,.025),
+                  0 0 0 70px rgba(214,179,106,.02);
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 740px;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 11px;
+      font-weight: bold;
+      margin-bottom: 22px;
+    }
+
+    h1, h2, h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: normal;
+      line-height: 1.2;
+    }
+
+    h1 {
+      font-size: clamp(42px, 6vw, 72px);
+      letter-spacing: -1.5px;
+      margin-bottom: 25px;
+    }
+
+    h1 em {
+      color: var(--gold);
+      font-style: normal;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 17px;
+      max-width: 580px;
+      margin-bottom: 33px;
+    }
+
+    .button {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--navy);
+      padding: 15px 23px;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: .2s;
+    }
+
+    .button:hover {
+      background: #ead29c;
+      transform: translateY(-2px);
+    }
+
+    .button-outline {
+      display: inline-block;
+      border: 1px solid rgba(255,255,255,.4);
+      color: var(--white);
+      padding: 14px 23px;
+      margin-left: 10px;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .trust-strip {
+      background: #102642;
+      color: var(--white);
+      border-top: 1px solid rgba(214,179,106,.25);
+      border-bottom: 1px solid rgba(214,179,106,.25);
+    }
+
+    .trust-items {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      padding: 24px 0;
+      gap: 20px;
+      text-align: center;
+    }
+
+    .trust-items div {
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+
+    .trust-items span {
+      color: var(--gold);
+      margin-right: 8px;
+    }
+
+    section {
+      padding: 88px 0;
+    }
+
+    .section-heading {
+      max-width: 650px;
+      margin-bottom: 42px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(32px, 4vw, 46px);
+      margin-bottom: 17px;
+    }
+
+    .section-heading p {
+      color: #5e6875;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .service-card {
+      background: var(--white);
+      padding: 31px 26px;
+      border: 1px solid #e7e2d7;
+      border-top: 3px solid var(--gold);
+      transition: .2s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(8,23,43,.08);
+    }
+
+    .service-icon {
+      color: #a17d37;
+      font-size: 30px;
+      margin-bottom: 17px;
+    }
+
+    .service-card h3 {
+      font-size: 23px;
+      margin-bottom: 12px;
+    }
+
+    .service-card p {
+      color: #657080;
+      font-size: 14px;
+    }
+
+    .about {
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 65px;
+      align-items: center;
+    }
+
+    .about h2 {
+      font-size: clamp(34px, 4vw, 48px);
+      margin-bottom: 23px;
+    }
+
+    .about p {
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .values {
+      border-left: 1px solid rgba(214,179,106,.5);
+      padding-left: 30px;
+    }
+
+    .value {
+      padding: 15px 0;
+      border-bottom: 1px solid rgba(255,255,255,.12);
+    }
+
+    .value:last-child {
+      border-bottom: none;
+    }
+
+    .value h3 {
+      color: var(--gold);
+      font-size: 22px;
+      margin-bottom: 5px;
+    }
+
+    .value p {
+      margin: 0;
+      font-size: 14px;
+    }
+
+    .process {
+      background: #eeebe4;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .step-number {
+      color: #b08c49;
+      font-family: Georgia, serif;
+      font-size: 38px;
+      margin-bottom: 10px;
+    }
+
+    .process h3 {
+      font-size: 23px;
+      margin-bottom: 10px;
+    }
+
+    .process p {
+      color: #657080;
+      font-size: 14px;
+    }
+
+    .contact {
+      text-align: center;
+      background: var(--white);
+    }
+
+    .contact .section-heading {
+      margin: 0 auto 28px;
+    }
+
+    .contact h2 {
+      font-size: clamp(34px, 4vw, 48px);
+    }
+
+    .contact-note {
+      color: #657080;
+      font-size: 14px;
+      margin: 22px auto 0;
+      max-width: 550px;
+    }
+
+    footer {
+      background: #050f1d;
+      color: var(--muted);
+      padding: 28px 0;
+      font-size: 12px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    footer strong {
+      color: var(--gold);
+    }
+
+    @media (max-width: 760px) {
+      nav {
+        padding: 17px 0;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 14px 20px;
+      }
+
+      .nav-cta {
+        padding: 7px 10px;
+      }
+
+      .hero {
+        padding: 75px 0;
+      }
+
+      .trust-items,
+      .services-grid,
+      .about-grid,
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .trust-items {
+        gap: 13px;
+        text-align: left;
+      }
+
+      section {
+        padding: 65px 0;
+      }
+
+      .about-grid {
+        gap: 35px;
+      }
+
+      .values {
+        padding-left: 20px;
+      }
+
+      .button-outline {
+        margin: 12px 0 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+      <nav aria-label="Main navigation">
+
+        <a href="#home" class="brand" aria-label="Justice Property Protection home">
+          <svg viewBox="0 0 100 115" fill="none"
+               xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M50 5 L62 15 L77 12 L79 26 L92 34 L84 47
+                     L88 63 L76 70 L73 86 L50 108 L27 86
+                     L24 70 L12 63 L16 47 L8 34 L21 26
+                     L23 12 L38 15 Z"
+                  stroke="#D6B36A" stroke-width="2.5"/>
+            <path d="M31 42 L50 27 L69 42"
+                  stroke="#D6B36A" stroke-width="3"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M37 41 V62 H63 V41"
+                  stroke="#D6B36A" stroke-width="3"
+                  stroke-linejoin="round"/>
+            <path d="M46 62 V49 H54 V62"
+                  stroke="#D6B36A" stroke-width="2.5"/>
+            <path d="M36 20 L39 10 L46 17 L50 7 L55 17 L62 10 L65 20"
+                  stroke="#D6B36A" stroke-width="2.5"
+                  stroke-linejoin="round"/>
+          </svg>
+
+          <div class="brand-name">
+            JUSTICE
+            <span>PROPERTY PROTECTION INC.</span>
+          </div>
+        </a>
+
+        <div class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#services">Services</a>
+          <a href="#about">Our Standard</a>
+          <a href="#contact" class="nav-cta">Contact Us</a>
+        </div>
+
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-content">
+          <div class="eyebrow">Greater Vancouver · Property Care</div>
+
+          <h1>
+            Your Property.<br>
+            Our <em>Priority.</em>
+          </h1>
+
+          <p>
+            Professional property care. Complete peace of mind.
+            Discover a higher standard of property maintenance,
+            monitoring and seasonal care, tailored to your needs.
+          </p>
+
+          <a href="#contact" class="button">
+            Request a Property Assessment
+          </a>
+
+          <a href="#services" class="button-outline">
+            Explore Our Services
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="trust-strip">
+      <div class="container trust-items">
+        <div><span>◆</span> PROFESSIONAL SERVICE</div>
+        <div><span>◆</span> TAILORED PROPERTY CARE</div>
+        <div><span>◆</span> PEACE OF MIND</div>
+      </div>
+    </div>
+
+    <section id="services">
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="eyebrow">What We Do</div>
+          <h2>Complete Care. One Trusted Partner.</h2>
+          <p>
+            From routine property checks to year-round grounds
+            maintenance, we work to keep your property cared for,
+            presentable and managed to your expectations.
+          </p>
+        </div>
+
+        <div class="services-grid">
+
+          <article class="service-card">
+            <div class="service-icon">⌂</div>
+            <h3>Property Monitoring</h3>
+            <p>
+              Scheduled visual property checks and condition
+              observations designed to help owners stay informed
+              about their property's appearance and condition.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">✦</div>
+            <h3>Lawn & Grounds Care</h3>
+            <p>
+              Professional lawn care, grounds upkeep and exterior
+              maintenance to help your property maintain a clean,
+              polished and welcoming appearance.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">❄</div>
+            <h3>Seasonal Maintenance</h3>
+            <p>
+              Seasonal services including snow removal and
+              appropriate outdoor upkeep to help you prepare
+              for changing weather and property needs.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">◇</div>
+            <h3>Customized Service Plans</h3>
+            <p>
+              Flexible service arrangements based on your property,
+              preferred schedule and specific maintenance
+              requirements.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">⌖</div>
+            <h3>Exterior Upkeep</h3>
+            <p>
+              Attention to visible exterior conditions and general
+              presentation, helping identify maintenance concerns
+              that may require further attention.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">✓</div>
+            <h3>Reliable Communication</h3>
+            <p>
+              Clear communication about scheduled visits,
+              observations and agreed service tasks, so you
+              know what is happening with your property.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="container about-grid">
+
+        <div>
+          <div class="eyebrow">The Justice Standard</div>
+          <h2>More Than Maintenance. A Standard of Care.</h2>
+          <p>
+            At Justice Property Protection Inc., we believe that
+            every property deserves attention, professionalism
+            and respect.
+          </p>
+          <p>
+            Our approach is built around understanding each
+            client's needs, creating a clear service plan and
+            delivering consistent property care.
+          </p>
+          <a href="#contact" class="button">Let's Talk About Your Property</a>
+        </div>
+
+        <div class="values">
+          <div class="value">
+            <h3>Integrity</h3>
+            <p>Honest communication and clear expectations.</p>
+          </div>
+
+          <div class="value">
+            <h3>Attention to Detail</h3>
+            <p>A thoughtful approach to every agreed task.</p>
+          </div>
+
+          <div class="value">
+            <h3>Professionalism</h3>
+            <p>Respect for your property, time and priorities.</p>
+          </div>
+
+          <div class="value">
+            <h3>Peace of Mind</h3>
+            <p>Property care designed around your needs.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="process">
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="eyebrow">A Simple Process</div>
+          <h2>Property Care Made Straightforward.</h2>
+          <p>
+            A personalized approach from the first conversation
+            through the delivery of your agreed services.
+          </p>
+        </div>
+
+        <div class="process-grid">
+          <div>
+            <div class="step-number">01</div>
+            <h3>Tell Us Your Needs</h3>
+            <p>
+              Share details about your property, your concerns
+              and the services you are looking for.
+            </p>
+          </div>
+
+          <div>
+            <div class="step-number">02</div>
+            <h3>Build Your Plan</h3>
+            <p>
+              Discuss a suitable service schedule and a
+              customized approach for your property.
+            </p>
+          </div>
+
+          <div>
+            <div class="step-number">03</div>
+            <h3>Move Forward With Confidence</h3>
+            <p>
+              Confirm the agreed services, expectations and
+              communication process before work begins.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="eyebrow">Let's Get Started</div>
+          <h2>Your Property Deserves the Justice Standard.</h2>
+          <p>
+            Looking for dependable property care in Greater
+            Vancouver? Contact us to discuss your property
+            and request a personalized assessment.
+          </p>
+        </div>
+
+        <!-- Replace the placeholder email below with your real business email. -->
+        <a class="button"
+           href="mailto:info@justicepropertycontact@gmail.com?subject=Property%20Assessment%20Request">
+          Request a Property Assessment
+        </a>
+
+        <p class="contact-note">
+          Tell us about your property and the services you need.
+          We'll use that information to discuss the next steps.
+        </p>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>
+        <strong>JUSTICE PROPERTY PROTECTION INC.</strong>
+        <p>Professional Property Care. Complete Peace of Mind.</p>
+      </div>
+
+      <div>
+        © <span id="year">2026</span> Justice Property Protection Inc.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
